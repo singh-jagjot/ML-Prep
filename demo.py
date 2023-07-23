@@ -11,3 +11,10 @@ model = tf.keras.applications.ResNet50(
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=False)
 model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
 model.fit(x_train, y_train, epochs=5, batch_size=64)
+
+# import numpy as np
+
+# a = np.array([1,2,3,4])
+# b = np.transpose(a)
+
+# print()
