@@ -78,5 +78,16 @@ x = np.arange(1,5).reshape((2,2))
 # aa = np.array([])
 # print(np.append(aa,np.average(x[:,0])))
 # aa = np.array([1,-1])
-print(x)
-print(np.square(x))
+# print(x)
+# print(np.square(x))
+
+a  = np.random.randn(3,3)
+b = np.random.randn(2,1)
+# c = np.random.randn(3,4)
+# for i in range(3):
+#   for j in range(4):
+#     c[i][j] = a[j][i] + b[j]
+
+# print(c)
+# print(a.T + b.T)
+print(a+b)
