@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-# import tensorflow as tf
+import tensorflow as tf
 
 # cifar = tf.keras.datasets.cifar100
 # (x_train, y_train), (x_test, y_test) = cifar.load_data()
@@ -17,7 +17,6 @@ import numpy as np
 # hw = tf.config.get_visible_devices()
 # tf.config.set_visible_devices(hw[0])
 
-import numpy as np
 # # import matplotlib.pyplot as plt
 # # from sklearn.linear_model import LinearRegression, Ridge
 # # from sklearn.preprocessing import StandardScaler, PolynomialFeatures
@@ -68,7 +67,7 @@ import numpy as np
 #     epochs=1000
 # )
 
-x = np.arange(1,5).reshape((2,2))
+# x = np.arange(1,5).reshape((2,2))
 # print(np.linalg.norm(x[0]))
 # print(np.linalg.norm(x[1]))
 # print(np.linalg.norm(x[0]) - np.linalg.norm(x[1]))
@@ -81,8 +80,8 @@ x = np.arange(1,5).reshape((2,2))
 # print(x)
 # print(np.square(x))
 
-a  = np.random.randn(3,3)
-b = np.random.randn(2,1)
+# a  = np.random.randn(3,3)
+# b = np.random.randn(2,1)
 # c = np.random.randn(3,4)
 # for i in range(3):
 #   for j in range(4):
@@ -90,4 +89,33 @@ b = np.random.randn(2,1)
 
 # print(c)
 # print(a.T + b.T)
-print(a+b)
+# print(a+b)
+input_shape = (1, 1, 2, 2)
+x = np.arange(np.prod(input_shape)).reshape(input_shape)
+print(x)
+
+
+y = tf.keras.layers.ZeroPadding2D(padding=2)(x)
+print(y)
+
+# input_shape = (1, 2, 3)
+# x = np.arange(np.prod(input_shape)).reshape(input_shape)
+# print(x)
+
+
+
+
+# y = tf.keras.layers.ZeroPadding1D(padding=1)(x)
+# print(y)
+
+
+
+
+
+
+
+
+
+
+
+
