@@ -90,13 +90,13 @@ import tensorflow as tf
 # print(c)
 # print(a.T + b.T)
 # print(a+b)
-input_shape = (1, 1, 2, 2)
-x = np.arange(np.prod(input_shape)).reshape(input_shape)
-print(x)
+# input_shape = (1, 1, 2, 2)
+# x = np.arange(np.prod(input_shape)).reshape(input_shape)
+# print(x)
 
 
-y = tf.keras.layers.ZeroPadding2D(padding=2)(x)
-print(y)
+# y = tf.keras.layers.ZeroPadding2D(padding=2)(x)
+# print(y)
 
 # input_shape = (1, 2, 3)
 # x = np.arange(np.prod(input_shape)).reshape(input_shape)
@@ -109,7 +109,12 @@ print(y)
 # print(y)
 
 
-
+input_shape = (2, 4, 5, 3)
+x = tf.random.normal(input_shape)
+y = tf.keras.layers.GlobalAveragePooling2D()(x)
+print(y.shape)
+print(x)
+print(y)
 
 
 
