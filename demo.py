@@ -109,12 +109,19 @@ import tensorflow as tf
 # print(y)
 
 
-input_shape = (2, 4, 5, 3)
-x = tf.random.normal(input_shape)
-y = tf.keras.layers.GlobalAveragePooling2D()(x)
-print(y.shape)
+x =tf.constant([[[2, 20, 30, 3, 6], [3, 11, 16, 1, 8],
+                 [14, 45, 23, 5, 27]],[[2, 20, 30, 3, 6], [3, 11, 16, 1, 8],
+                 [14, 45, 23, 5, 27]]])
+y = tf.math.argmax(x, axis=-1)
+z = tf.math.reduce_max(x, axis=-1)
+aa = z > 20
+b = tf.boolean_mask(z, aa)
 print(x)
 print(y)
+print(z)
+print(aa)
+print(b)
+
 
 
 
