@@ -1,2 +1,2 @@
-# coursera-prep
-Backup files for my preparation of Coursera Specializations/Courses
+# ML-Prep
+Backup files of Specializations/Courses for ML preparation.
